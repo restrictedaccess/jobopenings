@@ -1,0 +1,7 @@
+.sign_in_via_fb{
+	background:url(../images/sign_in_via_fb.png) no-repeat transparent;
+	width:197px;
+	height:24px;
+	border:none;
+	cursor: pointer;
+}

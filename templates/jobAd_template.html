@@ -1,0 +1,233 @@
+<script id="jobads-templates" type="text/x-handlebars-template">
+
+		<table style="margin-bottom:0px;width:100%;background: url(../images/bg-header2.jpg) top left;color:white;height:45px;background-size: 2%;line-height: 46px;">
+		 <thead><tr><th style="width:541px;padding-left: 12px;font-size:12px;">Job Position</th><th style="font-size:12px;">Employment</th><th style="font-size:12px;">Work Location</th></tr></thead>
+		 <tbody>
+
+
+
+		{{#each Ads}}
+
+
+		{{#ifCond @index ">" "4"}}
+				{{#ifCond Ads.showme "==" "1" }}
+							<div class='show_more' style='display:none;'>
+							{{else}}
+							<div class='show_more' style='display:inline;'>
+						{{/ifCond}}
+			
+
+
+		{{/ifCond}}
+
+
+			<div><table class="table table-striped {{work_status}}" style="margin-bottom:-13px !important;">
+				<thead><tr><th></th><th></th><th></th></tr></thead>
+				<tbody>
+					<tr><td>
+						<table><tr>
+							<td style="width:550px;"><label style="margin-let:5px" id=title_{{ads.id}}>
+
+								{{singular_name}}
+
+							</label></td></tr>
+							<tr>
+								<td><div id=heading_{{ads.id}}  data-ref-heading='{{strip-scripts ads.heading}}' style="margin-top:5%;"><p style="width:450px;">
+								{{trimString ads.heading 0 256}}...</p></div></td></tr>
+							<tr>
+								<td>
+									<a id="modal_click" data-ref-id={{ads.id}} data-ref-jo_id={{job_order_id}} href="" data-toggle="modal" data-target="#myModal" style="margin-left:15px;">Read more</a>
+
+							</td></tr></table>
+							<td>
+
+								{{#ifCond work_status "==" "Full-Time"}}
+
+								<span data-ref-level='{{level}}'  data-ref-sched='{{working_timezone}} {{start_work}}-{{finish_work}}'  data-ref-model='{{work_model}}'
+								data-ref-staff='{{no_of_staff_needed}}' id="status_{{ads.id}}" style="display:inline-block;float:right;padding:0px;width:68px;color:#489cdf">
+									{{work_status}}
+								</span>
+
+								{{else}}
+
+								<span data-ref-level='{{level}}'  data-ref-sched='{{working_timezone}} {{start_work}}-{{finish_work}}'  data-ref-model='{{work_model}}'
+								data-ref-staff='{{no_of_staff_needed}}' id="status_{{ads.id}}" style="display:inline-block;float:right;padding:0px;width:68px;color:#04B45F">
+									{{work_status}}
+								</span>
+
+								{{/ifCond}}
+
+							</td>
+							<td style="width:15%;">
+								<span style="width:100px;padding:0px;">{{work_model}}</span>
+								</td></tr></tbody>
+
+							<div id='cont_{{ads.id}}' style='display:none;'>
+								<input type='hidden' value='{{client}}' id='client_{{ads.id}}'>
+									{{{ads.heading}}}<br><br>
+
+								{{#if msneu}}
+										{{#if ms}}
+
+														{{#if converted_requirements.must_have.length}}
+
+																<h4 style='text-align:left;margin-left:0px'><b>Requirements</b></h4>
+																		<h4 style='text-align:left;'><b>Must have</b></h4>
+																		 <div style='margin-top:5px;padding-left:15px;'>
+																			<ul>
+
+																			{{#each converted_requirements.must_have}}
+
+																					<li>{{{requirement}}}</li>
+																			{{/each}}
+
+																		</ul>
+																	</div><br>
+
+														{{/if}}
+
+
+														{{#if converted_requirements.good_to_have.length}}
+
+																<h4 style='text-align:left;'><b>Good to have</b></h4>
+																	<div style='margin-top:5px;margin-left:15px;'>
+																		<ul>
+
+																			{{#each converted_requirements.good_to_have}}
+
+																					<li>{{{requirement}}}</li>
+																			{{/each}}
+
+																		</ul>
+																	</div><br>
+
+														{{/if}}
+
+
+										{{else}}
+
+
+													{{#if neutral}}
+
+
+
+																					<h4 style='text-align:left;margin-left:0px'><b>Requirements</b></h4>
+																						<div style='margin-top:10px;margin-left:15px;'>
+																							<ul>
+
+																								{{#each converted_requirements.neutral}}
+
+																										<li>{{{requirement}}}</li>
+																								{{/each}}
+
+																							</ul>
+																						</div><br>
+
+
+															{{else}}
+
+																					<h4 style='text-align:left;margin-left:0px'><b>Requirements</b></h4>
+																						<div style='margin-top:10px;margin-left:15px;'>
+																							<ul>
+
+																								{{#each gs_requirements}}
+
+																										<li>{{{description}}}</li>
+																								{{/each}}
+
+																							</ul>
+																						</div><br>
+
+													{{/if}}
+
+
+										{{/if}}
+
+								{{else}}
+
+											<h4 style='text-align:left;margin-left:0px'><b>{{hasDataMs}}</b></h4>
+
+								{{/if}}
+
+
+								{{#if gsresp}}
+
+										{{#if resp}}
+
+
+																		<h4 style='text-align:left;margin-left:0px'><b>Responsibilities</b></h4>
+																			<div style='margin-top:10px;margin-left:15px;'>
+																				<ul>
+
+
+																					{{#each converted_responsbilities}}
+
+																							<li>{{{responsibility}}}</li>
+																					{{/each}}
+																				</ul>
+																			</div><br>
+
+
+
+											{{else}}
+
+
+
+																	<h4 style='text-align:left;margin-left:0px'><b>Responsibilities</b></h4>
+																		<div style='margin-top:10px;margin-left:15px;'>
+																			<ul>
+
+																				{{#each gs_responsibilities}}
+
+																						<li>{{{description}}}</li>
+																				{{/each}}
+
+																			</ul>
+																		</div><br>
+
+
+										{{/if}}
+
+
+									{{else}}
+															<h4 style='text-align:left;margin-left:0px'><b>{{hasDataResp}}</b></h4>
+
+									{{/if}}
+
+
+
+
+
+
+
+
+
+							</div>
+							</table></div>
+
+					{{#ifCond @index ">" "4" }}
+						{{#ifCond Ads.showme "==" "1" }}
+							</div>
+							{{else}}
+							
+						{{/ifCond}}
+					{{/ifCond}}
+
+		{{/each}}
+
+		</tbody>
+	</table>
+
+			{{#ifCond Ads.len ">" "5"}}
+				{{#ifCond Ads.showme "==" "1" }}
+						
+							{{else}}
+							
+							<center><button align="center" style="width:30%;margin-top:16px;" type="button" class="btn btn-w-m btn-default" id="button_show">Show more</button></center>
+						{{/ifCond}}
+								
+							
+				
+			{{/ifCond}}
+
+	</script>

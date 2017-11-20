@@ -1,0 +1,4 @@
+/* Checkbox change in design using CSS */
+.checkbox input[type=checkbox] {display:none;}
+.checkbox input[type=checkbox] + label {background:url(../images/form-sprite.png) no-repeat -0px 0;height: 28px;line-height:28px;display:inline-block;padding: 0 0 0 35px;}
+.checkbox input[type=checkbox]:checked + label {background:url(../images/form-sprite.png) no-repeat 0px -44px;height: 28px;line-height:28px;display:inline-block;padding: 0 0 0 35px;}

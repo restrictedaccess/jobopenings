@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.remotestaff.com.ph/</loc>
+  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/index.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/prosandcons.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/qualities.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/howwework.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/testimonials.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/apply.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopenings.php</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopeningsphp.php?job=1</loc>
+  <priority>0.64</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopeningsphp.php?job=2</loc>
+  <priority>0.64</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopeningsphp.php?job=3</loc>
+  <priority>0.64</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopeningsphp.php?job=4</loc>
+  <priority>0.64</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.remotestaff.com.ph/jobopeningsphp.php?job=5</loc>
+  <priority>0.64</priority>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

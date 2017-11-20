@@ -1,0 +1,100 @@
+
+TD
+{
+    font-family: Tahoma;
+	font-size: 12px;
+	color: #000000;
+	margin: 0px;
+}
+.tip
+{
+    FONT: 7.5pt verdana;
+    COLOR: #666666
+}
+.text
+{
+    BORDER-RIGHT: #1c5180 1px solid;
+    BORDER-TOP: #1c5180 1px solid;
+    BORDER-LEFT: #1c5180 1px solid;
+    BORDER-BOTTOM: #1c5180 1px solid;
+    FONT: 8pt verdana
+}
+
+#work
+{
+font-family: Trebuchet MS, sans-serif, Arial, Helvetica;
+font-size: 14px;
+line-height: 1.2em;
+color: #444;
+width: 100%;
+margin: 0 0 0 0px;
+
+}
+
+#work fieldset
+{
+background:#FFF;
+border: 1px dashed #AAA;
+}
+
+#work legend
+{
+background:#DDD;
+border: 2px solid #CCC;
+padding-top: 2px;
+padding-bottom: 2px;
+padding-left: 15px;
+padding-right: 15px;
+margin-left: 25px;
+font-weight: bold;
+font-size: 16px;
+}
+
+#work p
+{
+margin-bottom: 4px;
+margin-top: 4px;
+}
+
+
+#work label
+{
+display: block;
+width: 200px;
+float: left;
+text-align:right;
+padding-right: 10px;
+font-size:12px;
+
+}
+
+#work p span em
+{
+display: block;
+width: 120px;
+float: left;
+text-align: right;
+padding-right: 10px;
+font-style: normal;
+}
+
+#work p span input
+{
+vertical-align: middle;
+border: none;
+background: none;
+}
+
+#work strong
+{
+margin-left: 150px;
+}
+
+#work strong input
+{
+background: #0066FF;
+border: 1px solid #444;
+font-weight: bold;
+color: #FFFFFF;
+margin-top: 10px;
+}

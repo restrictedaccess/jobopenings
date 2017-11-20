@@ -1,0 +1,65 @@
+<div align="center" id="vid" style="margin-top:0px;">
+<p><a href="/seminar/seminar.php"><img src="/images/book_seminar_btn.jpg" border="0" /></a></p>
+</div>
+
+<div id="vid">
+<img src="images/it-vid.jpg" border="0" style="padding-bottom:10px; cursor:pointer" onClick="popup_win('remotestaff_presentation.php', 860, 330)"/>
+<p><strong>Remote Staff </strong>Presentation</p>
+</div> <!-- End of Vid 2 -->
+
+<img src="images/icon-latest-job.jpg" />
+
+<div id="staffclass">
+<table width="100%" cellpadding="0" cellspacing="0">
+
+<?php
+//parse all advertisement category
+//jr_cat_id, cat_name
+$script_file_name = "jobopenings.php";
+$sql = $db->select()
+	->from('job_role_category');
+$categories = $db->fetchAll($sql);	
+foreach($categories as $category){
+
+if($_GET['jr_cat_id'] == $category['jr_cat_id']){
+	$display = "block";
+}else{
+	$display = "block";
+}
+?>
+<tr id="tr_<?php echo $category['jr_cat_id'];?>" style="background:url(images/avail-staff-left-title-expanded.jpg);">
+<td height="30" align="right" style="padding-right:5px; color:#FFFFFF; font-weight:bold; cursor:pointer;" onclick="MinMax(<?php echo $category['jr_cat_id'];?>)"><?php echo $category['cat_name'];?></td>
+</tr>
+
+<tr><td align="right" style="padding-right:5px;">
+<div id="tr_sub_<?php echo $category['jr_cat_id'];?>" style="display:<?php echo $display;?>">
+<ul>
+	<?php
+	$query = $db->select()
+		->from('job_category')
+		->where('job_role_category_id =?' , $category['jr_cat_id'])
+		->where('status != ?','removed');
+	$sub_cats = $db->fetchAll($query);
+	$counter =0;
+	foreach($sub_cats as $sub_cat){
+	$counter++;
+	?>
+	<li><a href="<?php echo $script_file_name."?jr_cat_id=".$category['jr_cat_id']."&category_id=".$sub_cat['category_id'];?>"><?php echo $sub_cat['category_name'];?></a></li>
+	<?php } ?>
+</ul>
+</div>  
+</td></tr>
+
+<?php }$hash_code = chr(rand(ord("a"), ord("z"))) . substr( md5( uniqid( microtime()) . $_SERVER[ 'REMOTE_ADDR' ] . $_GET['jr_cat_id'] ), 2, 17 );?>
+</table>
+</div>
+
+  <!--<a href="adhocstaffing.php"><img src="images/btn-adhocstaffing.jpg" border="0" /></a><br />&nbsp;-->
+  
+<div id="sep">
+<a href="javascript:popup_win8('webchat.php?hash=<?php echo $hash_code; ?>',700,600);"><img src="images/icon-livechat.jpg" width="170" height="60" border="0" /></a><br /><br />
+</div>
+<div align="center">
+<img src="images/mb_52712.jpg" alt="" border="0"/><br />
+<strong style="font-size:12px; font:Arial, Helvetica, sans-serif">As posted in Manila Bulletin<br />May 27, 2012</strong>
+</div>
